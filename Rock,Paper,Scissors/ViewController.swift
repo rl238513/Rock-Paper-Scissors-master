@@ -43,7 +43,7 @@ class ViewController: UIViewController {
     }
     
     func countReset() {
-        if count = >0()
+        if count = 3
     }
     
     let randomInt = Int.random(in: 0..<4)
