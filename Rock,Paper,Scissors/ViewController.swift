@@ -9,7 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var countNumber: UITextField!
     @IBOutlet weak var systemChoice: UIImageView!
     @IBOutlet weak var winnerLabel: UILabel!
     @IBOutlet weak var winnerImage: UIImageView!
@@ -18,36 +19,48 @@ class ViewController: UIViewController {
     var pictureArray = [#imageLiteral(resourceName: "paper.png"), #imageLiteral(resourceName: "rock.png"), #imageLiteral(resourceName: "scissors.png")]
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+     backgroundImmage.autoresizingMask = UIView.AutoresizingMask(rawValue: UIView.AutoresizingMask.RawValue(UInt8(UIView.AutoresizingMask.flexibleBottomMargin.rawValue) | UInt8(UIView.AutoresizingMask.flexibleHeight.rawValue) | UInt8(UIView.AutoresizingMask.flexibleRightMargin.rawValue) | UInt8(UIView.AutoresizingMask.flexibleLeftMargin.rawValue) | UInt8(UIView.AutoresizingMask.flexibleTopMargin.rawValue) | UInt8(UIView.AutoresizingMask.flexibleWidth.rawValue)))
+        self.backgroundImmage.layer.cornerRadius = self.backgroundImmage.frame.width / 2
+        backgroundImmage.backgroundColor = .green
+        self.view.backgroundColor = .red
+         winnerImage.autoresizingMask = UIView.AutoresizingMask(rawValue: UIView.AutoresizingMask.RawValue(UInt8(UIView.AutoresizingMask.flexibleBottomMargin.rawValue) | UInt8(UIView.AutoresizingMask.flexibleHeight.rawValue) | UInt8(UIView.AutoresizingMask.flexibleRightMargin.rawValue) | UInt8(UIView.AutoresizingMask.flexibleLeftMargin.rawValue) | UInt8(UIView.AutoresizingMask.flexibleTopMargin.rawValue) | UInt8(UIView.AutoresizingMask.flexibleWidth.rawValue)))
+         systemChoice.autoresizingMask = UIView.AutoresizingMask(rawValue: UIView.AutoresizingMask.RawValue(UInt8(UIView.AutoresizingMask.flexibleBottomMargin.rawValue) | UInt8(UIView.AutoresizingMask.flexibleHeight.rawValue) | UInt8(UIView.AutoresizingMask.flexibleRightMargin.rawValue) | UInt8(UIView.AutoresizingMask.flexibleLeftMargin.rawValue) | UInt8(UIView.AutoresizingMask.flexibleTopMargin.rawValue) | UInt8(UIView.AutoresizingMask.flexibleWidth.rawValue)))
     }
     
     @IBAction func paperButton(_ sender: Any) {
-        
+        countReset()
         systemPicture()
-        count += 1
     }
     
     @IBAction func rockButton(_ sender: Any) {
+        countReset()
         systemPicture()
-         count += 1
     }
     
     @IBAction func scissorButton(_ sender: Any) {
+        countReset()
         systemPicture()
-         count += 1
     }
     
     func systemPicture() {
+        countReset()
         systemChoice.image = pictureArray [count]
-        
     }
     
-    func countReset() {
-        if count = 3
+    func countReset(){
+        if count == 3{
+            count = 0
+            Double(countNumber.text!)
+            countNumber.text = Int(count)
+        }else{
+            count += 1
+            Double(countNumber.text!)
+            countNumber.text = Int(count)
+        }
     }
     
-    let randomInt = Int.random(in: 0..<4)
-    var count = 1
+    let randomInt = Int.random(in: 0...4)
+    var count = 0
     
     
     
