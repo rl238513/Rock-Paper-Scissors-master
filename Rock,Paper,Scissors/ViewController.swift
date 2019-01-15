@@ -10,13 +10,16 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var countNumber: UITextField!
+    @IBOutlet weak var countNumber: UILabel!
     @IBOutlet weak var systemChoice: UIImageView!
     @IBOutlet weak var winnerLabel: UILabel!
     @IBOutlet weak var winnerImage: UIImageView!
     @IBOutlet weak var backgroundImmage: UIImageView!
     
     var pictureArray = [#imageLiteral(resourceName: "paper.png"), #imageLiteral(resourceName: "rock.png"), #imageLiteral(resourceName: "scissors.png")]
+    
+    let randomInt = Int.random(in: 0...2)
+    var count = 0
     override func viewDidLoad() {
         super.viewDidLoad()
      backgroundImmage.autoresizingMask = UIView.AutoresizingMask(rawValue: UIView.AutoresizingMask.RawValue(UInt8(UIView.AutoresizingMask.flexibleBottomMargin.rawValue) | UInt8(UIView.AutoresizingMask.flexibleHeight.rawValue) | UInt8(UIView.AutoresizingMask.flexibleRightMargin.rawValue) | UInt8(UIView.AutoresizingMask.flexibleLeftMargin.rawValue) | UInt8(UIView.AutoresizingMask.flexibleTopMargin.rawValue) | UInt8(UIView.AutoresizingMask.flexibleWidth.rawValue)))
@@ -43,24 +46,34 @@ class ViewController: UIViewController {
     }
     
     func systemPicture() {
-        countReset()
-        systemChoice.image = pictureArray [count]
+//        countReset()
+        systemChoice.image = pictureArray[count]
     }
     
     func countReset(){
-        if count == 3{
-            count = 0
-            Double(countNumber.text!)
-            countNumber.text = Int(count)
-        }else{
+        countNumber.resignFirstResponder()
+        if count == 0 {
+            systemPicture()
             count += 1
-            Double(countNumber.text!)
-            countNumber.text = Int(count)
         }
+        else if count == 1 {
+            systemPicture()
+            count += 1
+        }
+       else if count == 2 {
+            count += 1
+            systemPicture()
+            count = 0
+            Int(countNumber.text!)
+            countNumber.text = String(count)
+        }
+//        else if count == 3{
+//            count = 0
+//
+//        }
     }
     
-    let randomInt = Int.random(in: 0...4)
-    var count = 0
+    
     
     
     

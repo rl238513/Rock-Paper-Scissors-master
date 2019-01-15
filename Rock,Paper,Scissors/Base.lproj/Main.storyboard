@@ -40,12 +40,12 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Cpg-r0-d5i">
                                         <rect key="frame" x="0.0" y="323.5" width="375" height="162"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F90-Rj-UVg">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zko-aK-BZn">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="0.0"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                             <imageView clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="VS" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aZs-am-fSr">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="162"/>
                                             </imageView>
@@ -95,7 +95,7 @@
                     </view>
                     <connections>
                         <outlet property="backgroundImmage" destination="t3Z-yX-Inf" id="zbV-nX-YIP"/>
-                        <outlet property="countNumber" destination="F90-Rj-UVg" id="h77-Dq-GWF"/>
+                        <outlet property="countNumber" destination="Zko-aK-BZn" id="c2f-DI-pyw"/>
                         <outlet property="systemChoice" destination="aqM-he-ef2" id="JB4-aR-SUr"/>
                         <outlet property="winnerImage" destination="aZs-am-fSr" id="4p8-mf-76W"/>
                         <outlet property="winnerLabel" destination="iRg-Xb-G6y" id="Fx7-Y1-tzZ"/>
