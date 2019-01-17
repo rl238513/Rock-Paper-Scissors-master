@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina6_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,87 +15,65 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Rock_Paper_Scissors" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dhmis-1 copy" translatesAutoresizingMaskIntoConstraints="NO" id="t3Z-yX-Inf">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="20" y="44" width="374" height="818"/>
                             </imageView>
-                            <stackView contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="jUu-Wg-1Z1">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="MYR-VI-f52">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="129.5"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="topRight" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vxl-Ux-6ci">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="129.5"/>
-                                                <state key="normal" title="Button" image="Da_Rules"/>
-                                                <connections>
-                                                    <action selector="daRules:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xFe-37-BlS"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f61-xO-2Vg">
-                                        <rect key="frame" x="0.0" y="129.5" width="375" height="129.5"/>
-                                        <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rock win" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aqM-he-ef2">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="129.5"/>
-                                            </imageView>
-                                        </subviews>
-                                    </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="    you win!!!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iRg-Xb-G6y">
-                                        <rect key="frame" x="0.0" y="259" width="375" height="129"/>
-                                        <fontDescription key="fontDescription" name="SnellRoundhand-Bold" family="Snell Roundhand" pointSize="54"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Cpg-r0-d5i">
-                                        <rect key="frame" x="0.0" y="388" width="375" height="129.5"/>
-                                        <subviews>
-                                            <imageView clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="VS" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aZs-am-fSr">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="129.5"/>
-                                            </imageView>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="6j0-dc-C8y">
-                                        <rect key="frame" x="0.0" y="517.5" width="375" height="129.5"/>
-                                        <subviews>
-                                            <button clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eUy-lj-Ca4">
-                                                <rect key="frame" x="0.0" y="0.0" width="125" height="129.5"/>
-                                                <state key="normal" title="Paper" image="paper"/>
-                                                <connections>
-                                                    <action selector="paperButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s92-be-3s3"/>
-                                                </connections>
-                                            </button>
-                                            <button clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sdu-Ey-yJn">
-                                                <rect key="frame" x="125" y="0.0" width="125" height="129.5"/>
-                                                <state key="normal" title="Rock" image="rock"/>
-                                                <connections>
-                                                    <action selector="rockButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aGr-ZQ-Do5"/>
-                                                </connections>
-                                            </button>
-                                            <button clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ohn-bR-JJ1">
-                                                <rect key="frame" x="250" y="0.0" width="125" height="129.5"/>
-                                                <state key="normal" title="Scissors" image="scissors"/>
-                                                <connections>
-                                                    <action selector="scissorButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8PJ-eb-3Ni"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                            </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rock win" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aqM-he-ef2">
+                                <rect key="frame" x="0.0" y="82" width="375" height="129.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="VS" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aZs-am-fSr">
+                                <rect key="frame" x="16" y="356" width="343" height="115"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="    you win!!!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iRg-Xb-G6y">
+                                <rect key="frame" x="0.0" y="219" width="375" height="129"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="SnellRoundhand-Bold" family="Snell Roundhand" pointSize="54"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eUy-lj-Ca4">
+                                <rect key="frame" x="16" y="522" width="98" height="125"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Paper" image="paper"/>
+                                <connections>
+                                    <action selector="paperButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s92-be-3s3"/>
+                                </connections>
+                            </button>
+                            <button clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ohn-bR-JJ1">
+                                <rect key="frame" x="225" y="535" width="134" height="113"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Scissors" image="scissors"/>
+                                <connections>
+                                    <action selector="scissorButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8PJ-eb-3Ni"/>
+                                </connections>
+                            </button>
+                            <button clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sdu-Ey-yJn">
+                                <rect key="frame" x="122" y="526" width="95" height="121"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Rock" image="rock"/>
+                                <connections>
+                                    <action selector="rockButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aGr-ZQ-Do5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="topRight" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vxl-Ux-6ci">
+                                <rect key="frame" x="319" y="44" width="56" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="Da_Rules"/>
+                                <connections>
+                                    <action selector="daRules:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xFe-37-BlS"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="jUu-Wg-1Z1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="1Un-8r-Zak"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jUu-Wg-1Z1" secondAttribute="trailing" id="2Cv-4e-8v3"/>
-                            <constraint firstItem="jUu-Wg-1Z1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="78s-QB-uQH"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="t3Z-yX-Inf" secondAttribute="trailing" id="BeW-jL-SuR"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="jUu-Wg-1Z1" secondAttribute="bottom" id="F9s-8s-Td2"/>
-                            <constraint firstItem="t3Z-yX-Inf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="W6O-h3-NQf"/>
-                            <constraint firstItem="t3Z-yX-Inf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="k9j-fO-eHa"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="t3Z-yX-Inf" secondAttribute="bottom" id="qMx-VQ-ZKT"/>
+                            <constraint firstItem="t3Z-yX-Inf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="OZ2-Zb-Znv"/>
+                            <constraint firstItem="t3Z-yX-Inf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="jLj-xS-4z6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="t3Z-yX-Inf" secondAttribute="trailing" constant="20" id="rW3-Ny-YCb"/>
+                            <constraint firstItem="t3Z-yX-Inf" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="xot-bq-url"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -108,11 +86,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+            <point key="canvasLocation" x="136.23188405797103" y="133.25892857142856"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Da_Rules" width="684" height="756"/>
+        <image name="Da_Rules" width="60" height="66"/>
         <image name="VS" width="1066.800048828125" height="600"/>
         <image name="dhmis-1 copy" width="144" height="274"/>
         <image name="paper" width="100" height="127"/>
