@@ -15,8 +15,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var winnerImage: UIImageView!
     @IBOutlet weak var backgroundImmage: UIImageView!
     
+    var gamePiece = 0
     var pictureArray = [#imageLiteral(resourceName: "paper.png"), #imageLiteral(resourceName: "rock.png"), #imageLiteral(resourceName: "scissors.png")]
     let number: [Int] = [0, 1, 2,]
+    var computerPiece = 0
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,31 +29,37 @@ class ViewController: UIViewController {
     }
     
     @IBAction func daRules(_ sender: Any) {
-    
+        
         if let url = URL(string: "https;//www.wrpsa.com/the-official-rules-of-rock-paper-scissors/") {
             UIApplication.shared.open(url, options: [:])
         }
     }
     
     @IBAction func paperButton(_ sender: Any) {
+        gamePiece = 0
         systemPicture()
+        if gamePiece == computerPiece{
+            self.winnerLabel.text = "tie"
+        }
+        if computerPiece == 1 {
+            self.winnerLabel.text = "win"
+        }
     }
     
     @IBAction func rockButton(_ sender: Any) {
+        gamePiece = 1
         systemPicture()
     }
     
     @IBAction func scissorButton(_ sender: Any) {
+        gamePiece = 2
         systemPicture()
     }
     
     func systemPicture() {
         let randomNumber = number.randomElement()!
         systemChoice.image = pictureArray[randomNumber]
+        computerPiece = randomNumber
     }
-    
-    
-    
-    
     
 }
