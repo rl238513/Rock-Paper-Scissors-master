@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     
     var gamePiece = 0
     var pictureArray = [#imageLiteral(resourceName: "paper.png"), #imageLiteral(resourceName: "rock.png"), #imageLiteral(resourceName: "scissors.png")]
+    var pictureArrayMk2 = [ #imageLiteral(resourceName: "PaperWin.jpg"), #imageLiteral(resourceName: "rock win-1.png"), #imageLiteral(resourceName: "scissorWin.jpg")]
     let number: [Int] = [0, 1, 2,]
     var computerPiece = 0
     
@@ -38,22 +39,31 @@ class ViewController: UIViewController {
     @IBAction func paperButton(_ sender: Any) {
         gamePiece = 0
         systemPicture()
-        if gamePiece == computerPiece{
-            self.winnerLabel.text = "tie"
-        }
+        tie()
         if computerPiece == 1 {
             self.winnerLabel.text = "win"
+            win()
         }
     }
     
     @IBAction func rockButton(_ sender: Any) {
         gamePiece = 1
         systemPicture()
+        tie()
+        if computerPiece == 2 {
+            self.winnerLabel.text = "win"
+            win()
+        }
     }
     
     @IBAction func scissorButton(_ sender: Any) {
         gamePiece = 2
         systemPicture()
+        tie()
+        if computerPiece == 0 {
+            self.winnerLabel.text = "win"
+            win()
+        }
     }
     
     func systemPicture() {
@@ -62,4 +72,18 @@ class ViewController: UIViewController {
         computerPiece = randomNumber
     }
     
+    func tie() {
+        if gamePiece == computerPiece{
+            self.winnerLabel.text = "tie"
+            winnerImage.image = UIImage (named: "Tie-PNG-File")
+        }
+    }
+    
+    func win() {
+        winnerImage.image = pictureArrayMk2[gamePiece]
+    }
+    
+    func loss() {
+        winnerImage.image = UIImage (named: "<#T##String#>")
+    }
 }
