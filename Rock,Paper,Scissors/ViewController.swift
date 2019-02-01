@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     
     var gamePiece = 0
     var pictureArray = [#imageLiteral(resourceName: "paper.png"), #imageLiteral(resourceName: "rock.png"), #imageLiteral(resourceName: "scissors.png")]
-    var pictureArrayMk2 = [ #imageLiteral(resourceName: "PaperWin.jpg"), #imageLiteral(resourceName: "rock win-1.png"), #imageLiteral(resourceName: "scissorWin.jpg")]
+    var pictureArrayMk2 = [#imageLiteral(resourceName: "PaperWin.jpg"), #imageLiteral(resourceName: "rock win copy.png"), ]
     let number: [Int] = [0, 1, 2,]
     var computerPiece = 0
     
