@@ -16,8 +16,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var backgroundImmage: UIImageView!
     
     var gamePiece = 0
-    var pictureArray = [#imageLiteral(resourceName: "paper.png"), #imageLiteral(resourceName: "rock.png"), #imageLiteral(resourceName: "scissors.png")]
-    var pictureArrayMk2 = [#imageLiteral(resourceName: "PaperWin.jpg"), #imageLiteral(resourceName: "rock win copy.png"), ]
+    var pictureArray = [UIImage(named: "paper"), UIImage(named: "rock"), UIImage(named: "scissors")]
+    var pictureArrayMk2 = [UIImage(named: "PaperWin"), UIImage(named: "rockWin"), UIImage(named: "scissorWin")]
     let number: [Int] = [0, 1, 2,]
     var computerPiece = 0
     
@@ -31,7 +31,7 @@ class ViewController: UIViewController {
     
     @IBAction func daRules(_ sender: Any) {
         
-        if let url = URL(string: "https;//www.wrpsa.com/the-official-rules-of-rock-paper-scissors/") {
+        if let url = URL(string: "https://www.wrpsa.com/the-official-rules-of-rock-paper-scissors/") {
             UIApplication.shared.open(url, options: [:])
         }
     }
@@ -44,6 +44,9 @@ class ViewController: UIViewController {
             self.winnerLabel.text = "win"
             win()
         }
+        if computerPiece == 2 {
+            loss()
+        }
     }
     
     @IBAction func rockButton(_ sender: Any) {
@@ -54,6 +57,9 @@ class ViewController: UIViewController {
             self.winnerLabel.text = "win"
             win()
         }
+        if computerPiece == 0 {
+            loss()
+        }
     }
     
     @IBAction func scissorButton(_ sender: Any) {
@@ -63,6 +69,9 @@ class ViewController: UIViewController {
         if computerPiece == 0 {
             self.winnerLabel.text = "win"
             win()
+        }
+        if computerPiece == 1 {
+            loss()
         }
     }
     
@@ -84,6 +93,9 @@ class ViewController: UIViewController {
     }
     
     func loss() {
-        winnerImage.image = UIImage (named: "<#T##String#>")
+        winnerImage.image = UIImage (named: "defeat")
+        self.winnerLabel.text = "LOSER"
     }
 }
+
+
